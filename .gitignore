@@ -1,0 +1,20 @@
+# Cabal build artifacts
+dist/
+dist-newstyle/
+
+# GHC build artifacts
+*.hi
+*.o
+*.dyn_hi
+*.dyn_o
+*.prof
+*.aux
+*.hp
+*.eventlog
+
+# GHC environment files
+.ghc.environment.*
+
+# Generated compression output
+*.lz77
+*.huff

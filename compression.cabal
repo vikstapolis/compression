@@ -1,0 +1,41 @@
+cabal-version:      3.6
+name:               compression
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            NONE
+author:             Vikstapolis
+maintainer:         vikramaunnikrishnan@gmail.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable compression
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules:    Huffman
+
+    -- LANGUAGE extensions used by modules in this package.
+    other-extensions: ViewPatterns
+    build-depends:    base >= 4.14 && < 5, containers, bytestring, filepath, extra, compression
+                      
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+library
+    hs-source-dirs:   src
+    exposed-modules:  Compression.Huffman, Compression.LZ77, Compression.LZ772
+    
+    other-modules: Compression.ByteArray
+
+    build-depends: base >= 4.14 && < 5, containers, bytestring, filepath, extra, vector
